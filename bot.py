@@ -53,7 +53,7 @@ async def links(ctx):
 @bot.command()
 async def embe(ctx, *, arg):
     user_inpt = arg  
-    embed = discord.Embed(title="".join(user_input), description="_Used to convey quick links to important information about the State Police_", color=0x3D59AB)
+    embed = discord.Embed(title="".join(user_inpt), description="_Used to convey quick links to important information about the State Police_", color=0x3D59AB)
 	
     embed.set_author(name="{}".format(ctx.message.author), icon_url="{}".format(ctx.author.avatar_url))
 	
