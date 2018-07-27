@@ -52,12 +52,18 @@ async def links(ctx):
 
 @bot.command()
 async def embe(ctx):
-    await ctx.send(embed=em)
-    embed=discord.Embed(title="Test", description='requested by:\n{0}'.format(ctx.message.author))
-    embed.set_author(name="Raymond")
-    embed.add_field(name=test123, value=test12314231231241234123123, inline=False)
-    embed.add_field(name=asdasqwe123, value=asdaseqweq, inline=True)
-    embed.set_footer(text="asdasdasd")
+    embed = discord.Embed(title="__State Police Quick Links__", description="_Used to convey quick links to important information about the State Police_", color=0x3D59AB)
+	
+    embed.set_author(name="{}".format(ctx.message.author), icon_url="https://cdn.discordapp.com/attachments/393324031505465344/471855906699739136/sasp_logo_updated_2018.png")
+	
+    embed.add_field(name="Standard Operating Procedures", value="[Click Here](https://docs.google.com/document/d/1KSx0TRJNOxV519Fn7saWGD6E9rIEKA2hWOa6U0BSWYY/edit)", inline=False)
+    embed.add_field(name="Uniform and Vehicle Guidelines", value="[Click Here](https://docs.google.com/document/d/1KrCscKX3FfANuiBJadci9ElmYpFkz4BPlmNPLMYTir0/edit)", inline=False)
+    embed.add_field(name="Penal Codes", value="[Click Here](https://docs.google.com/spreadsheets/d/1_HbwpqX9-QhGZ7oZkT3dmzW_O448hD86c-PqfmpvYIY/edit#gid=0)", inline=False)
+    embed.add_field(name="Roster", value="[Click Here](http://sasp.highspeed-gaming.com/index.php?/topic/22-san-andreas-state-police-roster/)", inline=False)
+    embed.add_field(name="Divisional Placements", value="[Click Here](http://sasp.highspeed-gaming.com/index.php?/topic/21-san-andreas-state-police-division-placements/)", inline=False)
+    embed.add_field(name="Punitive Articles/Disciplinary Policy", value="[Click Here](http://sasp.highspeed-gaming.com/index.php?/topic/79-san-andreas-state-police-punitive-articles-and-disciplinary-policy/)", inline=False)
+    embed.add_field(name="Transfers", value="[Click Here](http://sasp.highspeed-gaming.com/index.php?/forum/68-transfers/)", inline=False)
+	
     await ctx.send(embed=embed)
 
 
