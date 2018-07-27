@@ -66,10 +66,16 @@ async def embe(ctx,ar,arg,arg2,arg3,arg4):
     await asyncio.sleep(2) 
     await ctx.message.delete()
 
+@bot.command()
+async def mute(member: discord.Member):
+    await ctx.edit(member,mute=True)
+    await ctx.send('{} has been muted.'.format(member.mention))
 
 @bot.command()
-async def test(ctx, amount: int):
-    await ctx.send(ctx.message.author)
+async def unmute(member: discord.Member):
+    await ctx.edit(member,mute=False)
+    await ctx.send('{} has been unmuted.'.format(member.mention))
+        #await ctx.send(ctx.message.author)
 
 
 @bot.command()
