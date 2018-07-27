@@ -58,7 +58,7 @@ async def embe(ctx,ar,arg,arg2,arg3,arg4):
     user_inpt4 = arg4
     embed = discord.Embed(title="".join(user_inpt), description="".join(user_inpt2), color=0x3D59AB)
 	
-    embed.set_author(name="{}".format(ar), icon_url="{}".format(ctx.author.avatar_url))
+    embed.set_author(name="{}".format(ar), icon_url="https://cdn.discordapp.com/attachments/393324031505465344/471855906699739136/sasp_logo_updated_2018.png")
 	
     embed.add_field(name="".join(user_inpt3), value="[Click Here]({})".format(user_inpt4), inline=False)
  
