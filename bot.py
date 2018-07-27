@@ -51,8 +51,9 @@ async def links(ctx):
 
 
 @bot.command()
-async def embe(ctx):
-    embed = discord.Embed(title="__State Police Quick Links__", description="_Used to convey quick links to important information about the State Police_", color=0x3D59AB)
+async def embe(ctx, *, arg):
+    user_inpt = arg  
+    embed = discord.Embed(title=user_input, description="_Used to convey quick links to important information about the State Police_", color=0x3D59AB)
 	
     embed.set_author(name="{}".format(ctx.message.author), icon_url="{}".format(ctx.author.avatar_url))
 	
