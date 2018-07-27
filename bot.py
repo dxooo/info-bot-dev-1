@@ -52,7 +52,7 @@ async def links(ctx):
 
 @bot.command(pass_context=True)
 async def enlist(ctx, *, nickname):
-    await ctx.change_nickname(ctx.message.author, nickname)
+    await ctx.edit(ctx.message.author, nickname)
     role = get(ctx.message.server.roles, name='ARMA_ROLE') # Replace ARMA_ROLE as appropriate
     if role: # If get could find the role
         await client.add_role(ctx.message.author, role)
