@@ -50,10 +50,12 @@ async def links(ctx):
     await ctx.send(embed=embed)
 
 
-@bot.command()
-async def mention(member: discord.Member):
-    await ctx.send(member.nick)
-    await ctx.send(member.nickname)
+@bot.command(pass_context=True)
+async def enlist(ctx, *, nickname):
+    await ctx.change_nickname(ctx.message.author, nickname)
+    role = get(ctx.message.server.roles, name='ARMA_ROLE') # Replace ARMA_ROLE as appropriate
+    if role: # If get could find the role
+        await client.add_role(ctx.message.author, role)
 	
 @bot.command()
 async def clear(ctx, amount: int):
