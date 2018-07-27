@@ -126,7 +126,7 @@ async def searchpc(ctx, *, arg):
 5.06 Aggravated Battery	Misdemeanor	Up to 10 Minutes
 5.07 Attempted Murder	Felony	From 8 to 15 Minutes
 5.08 Manslaughter	Felony	From 8 to 15 Minutes
-5.09 Murder	Felony	From 8 to 15 Minutes
+55.09 Murder	|	Felony	|	From 8 to 15 Minutes
 5.10 False Imprisonment	Misdemeanor	Up to 5 Minutes
 5.11 Kidnapping	Felony	From 8 to 18 Minutes
 5.12 Mayhem	Felony	From 8 to 15 Minutes
