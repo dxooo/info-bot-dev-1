@@ -57,6 +57,10 @@ async def clear(ctx, amount: int):
 async def status(ctx):
     web = requests.get('http://status.highspeed-gaming.com/')
     soup = BeautifulSoup(web.content, 'html.parser')
+    for element in soup.find_all("dl"):
+      for stat in element.find_all("tr", attrs={"width":True}):
+        for players in stat.find_all("td")[1]:
+          ctx.send(players)
     servers = []
     for p in soup.find_all('a'):
       servers.append(p.text)
