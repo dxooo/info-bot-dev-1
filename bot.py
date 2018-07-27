@@ -63,7 +63,7 @@ async def status(ctx):
         for players in stat.find_all("td")[1]:
           players2.append(players)
 	
-    ctx.send(players2)
+    await ctx.send(players2)
 
     servers = []
     for p in soup.find_all('a'):
