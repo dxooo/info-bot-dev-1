@@ -118,20 +118,20 @@ async def searchpc(ctx, *, arg):
 4.23 Peace Officer Refusing to Arrest
 4.24 False Report of Crime or Emergency
 4.25 Street Gang Membership
-5.01 Intimidation
-5.02 Assault
-5.03 Assault With a Deadly Weapon
-5.04 Mutual Combat
-5.05 Battery
-5.06 Aggravated Battery
-5.07 Attempted Murder
-5.08 Manslaughter
-5.09 Murder
-5.10 False Imprisonment
-5.11 Kidnapping
-5.12 Mayhem
-5.13 Hate Crime
-5.14 Hostage Taking
+5.01 Intimidation	Misdemeanor	Up to 5 Minutes
+5.02 Assault	Misdemeanor	Up to 5 Minutes
+5.03 Assault With a Deadly Weapon	Misdemeanor/Felony	Up to 5 Minutes/From 5 to 10 Minutes
+5.04 Mutual Combat	Misdemeanor	Up to 5 Minutes
+5.05 Battery	Misdemeanor	Up to 5 Minutes
+5.06 Aggravated Battery	Misdemeanor	Up to 10 Minutes
+5.07 Attempted Murder	Felony	From 8 to 15 Minutes
+5.08 Manslaughter	Felony	From 8 to 15 Minutes
+5.09 Murder	Felony	From 8 to 15 Minutes
+5.10 False Imprisonment	Misdemeanor	Up to 5 Minutes
+5.11 Kidnapping	Felony	From 8 to 18 Minutes
+5.12 Mayhem	Felony	From 8 to 15 Minutes
+5.13 Hate Crime	Felony	From 8 to 15 Minutes
+5.14 Hostage Taking	Felony	From 8 to 15 Minutes	
 6.01 Indecent Exposure
 6.02 Obscene Exhibition
 6.03 Bawdy or Disorderly House
