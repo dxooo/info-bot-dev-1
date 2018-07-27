@@ -51,9 +51,9 @@ async def links(ctx):
 
 
 @bot.command()
-async def roles(ctx, *, member):
+async def roles(ctx, *, Member):
     await ctx.send("Hello")
-    await ctx.send(member.nick)
+    await ctx.send(Member.nick)
 	
 @bot.command()
 async def clear(ctx, amount: int):
