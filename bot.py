@@ -49,6 +49,16 @@ async def links(ctx):
 	
     await ctx.send(embed=embed)
 
+class MemberRoles(commands.MemberConverter):
+    async def convert(self, ctx, argument):
+        member = await super().convert(ctx, argument)
+        return member.nick
+
+@bot.command()
+async def roles(ctx, *, member: MemberRoles):
+    """Tells you a member's roles."""
+    await ctx.send('I see the following roles: ' + ', '.join(member))
+
 @bot.command()
 async def clear(ctx, amount: int):
     await ctx.channel.purge(limit=amount)
