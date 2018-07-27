@@ -51,8 +51,8 @@ async def links(ctx):
 
 
 @bot.command()
-async def roles(ctx, *, Member):
-    await ctx.send("Hello")
+async def roles(ctx, *, member):
+    await ctx.send("Hello2")
     await ctx.send(Member.nick)
 	
 @bot.command()
