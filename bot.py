@@ -60,7 +60,7 @@ async def embe(ctx, *, arg,arg2,arg3,arg4):
 	
     embed.set_author(name="{}".format(ctx.message.author), icon_url="{}".format(ctx.author.avatar_url))
 	
-    embed.add_field(name="".join(user_inpt3), value="[Click Here]("".join(user_inpt4))", inline=False)
+    embed.add_field(name="".join(user_inpt3), value="[Click Here](https://docs.google.com/forms/d/e/1FAIpQLSeAKv_TobhZFomfHyl-oUpTN2i5wHxjvsXND9AJCCbfZz7urA/viewform)", inline=False)
  
     await ctx.send(embed=embed)
 
