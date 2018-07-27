@@ -81,117 +81,117 @@ async def status(ctx):
 
 @bot.command()
 async def searchpc(ctx, *, arg):
-    temporary = """1.01 Inadmissible Defences
-1.02 Admissible Defences
-1.03 Persons Liable to Punishment
-2.01 Principals and Accessories
-2.02 Principles to a Crime
-2.03 Accessories to a Crime
-3.01 Bribery
-3.02 Felony Bribery
-3.03 Reception of a Bribe
-3.04 Felony Reception of a Bribe
-3.05 Obstruction of a Public Official
-3.06 Aggravated Obstruction of a Public Official
-4.01 Rescue
-4.02 Escape
-4.03 Aiding Escape
-4.04 Resisting Arrest
-4.05 Failure to Identify
-4.06 Obstruction of a Government Employee
-4.07 Misuse of a Government Hotline
-4.08 Tampering With Evidence
-4.09 Forgery of Public Record
-4.10 Perjury
-4.11 Falsification of Evidence
-4.12 Dissuading a Witness
-4.13 Evading
-4.14 Felony Reckless Evading
-4.15 Refusal to Sign
-4.16 Failure to Pay Fine
-4.17 Contempt of Court
-4.18 Provision of False Information to A State Employee
-4.19 False Complaint
-4.20 Human Trafficking
-4.21 Violation of Parole or Probation
-4.22 False Personation
-4.23 Peace Officer Refusing to Arrest
-4.24 False Report of Crime or Emergency
-4.25 Street Gang Membership
-5.01 Intimidation	Misdemeanor	Up to 5 Minutes
-5.02 Assault	Misdemeanor	Up to 5 Minutes
-5.03 Assault With a Deadly Weapon	Misdemeanor/Felony	Up to 5 Minutes/From 5 to 10 Minutes
-5.04 Mutual Combat	Misdemeanor	Up to 5 Minutes
-5.05 Battery	Misdemeanor	Up to 5 Minutes
-5.06 Aggravated Battery	Misdemeanor	Up to 10 Minutes
-5.07 Attempted Murder	Felony	From 8 to 15 Minutes
-5.08 Manslaughter	Felony	From 8 to 15 Minutes
-55.09 Murder	|	Felony	|	From 8 to 15 Minutes
-5.10 False Imprisonment	Misdemeanor	Up to 5 Minutes
-5.11 Kidnapping	Felony	From 8 to 18 Minutes
-5.12 Mayhem	Felony	From 8 to 15 Minutes
-5.13 Hate Crime	Felony	From 8 to 15 Minutes
-5.14 Hostage Taking	Felony	From 8 to 15 Minutes	
-6.01 Indecent Exposure
-6.02 Obscene Exhibition
-6.03 Bawdy or Disorderly House
-6.04 Prostitution
-6.05 Solicitation
-6.06 Pandering
-6.07 Sexual Assault
-6.08 Sexual Battery
-6.09 Rape
-6.10 Stalking
-6.11 Disorderly Conduct
-7.01 Possession of a Controlled Substance
-7.02 Possession of a Controlled Substance with Intent to Distribute
-7.03 Possession of Drug Paraphernalia
-7.04 Maintaining a Place for Purpose of Distribution
-7.05 Manufacture of a Controlled Substance
-7.06 Sale of a Controlled Substance
-7.07 Possession of an Open Container
-7.08 Public Intoxication
-7.09 Public Influence of a Controlled Substance
-7.10 Possession in Excess
-7.11 Criminal Threats
-7.12 Reckless Endangerment
-7.13 Trafficking of a Controlled Substance
-8.01 Obstruction of Assembly
-8.02 Riot
-8.03 Incitement to Riot
-8.04 Unlawful Assembly
-8.05 Breach of the Peace
-8.06 Obstruction of Rightful Passage
-9.01 Arson
-9.02 Burglary
-9.03 Possession of Burglary Tools
-9.04 Forgery
-9.05 Petty Theft
-9.06 Grand Theft
-9.07 Embezzlement
-9.08 Trespassing
-9.09 Robbery
-9.10 Armed Robbery
-9.11 Receiving Stolen Property
-9.12 Vandalism
-9.13 Criminal Damage
-9.14 Grand Larceny
-10.01 Hate Crime
-11.01 Extortion
-11.02 Money Laundering
-12.01 Unlawful Possession of a Firearm
-12.02 Unlawful Concealment of a Firearm
-12.03 Unlawful Carry of a Firearm
-12.04 Unlawful Display of a Firearm
-12.05 Unlawful Discharge of a Firearm
-12.06 Unlawful Possession of a Deadly Weapon
-12.07 Unlawful Display of a Deadly Weapon
-12.08 Unlawful Concealment of a Deadly Weapon
-12.09 Unlawful Possession of An Explosive Device
-12.10 Manufacture of an Explosive Device
-12.11 Unlawful Distribution of a Firearm
-12.12 Unlawful Possession of Firearms with Intent to Sell
-12.13 Unlawful Modification of a Firearm"""
+    temporary = """1.01 Inadmissible Defences	| 	N/A	| 	N/A
+1.02 Admissible Defences	| 	N/A	| 	N/A
+1.03 Persons Liable to Punishment	| 	N/A	| 	N/A	| 	
+2.01 Principals and Accessories	| 	N/A	| 	N/A
+2.02 Principles to a Crime	| 	N/A	| 	N/A
+2.03 Accessories to a Crime	| 	N/A	| 	N/A	| 	
+3.01 Bribery	| 	Misdemeanor	| 	Up to 3 Minutes
+3.02 Felony Bribery	| 	Felony	| 	From 5 to 10 Minutes
+3.03 Reception of a Bribe	| 	Misdemeanor	| 	Up to 3 Minutes
+3.04 Felony Reception of a Bribe	| 	Felony	| 	From 5 to 10 Minutes
+3.05 Obstruction of a Public Official	| 	Misdemeanor	| 	Up to 3 Minutes
+3.06 Aggravated Obstruction of a Public Official	| 	Felony	| 	Up to 10 Minutes	| 	
+4.01 Rescue	| 	Misdemeanor	| 	Up to 5 Minutes
+4.02 Escape	| 	Felony	| 	From 5 to 10 Minutes
+4.03 Aiding Escape	| 	Felony	| 	From 5 to 10 Minutes
+4.04 Resisting Arrest	| 	Misdemeanor	| 	Up to 3 Minutes
+4.05 Failure to Identify	| 	Misdemeanor	| 	10 Minutes
+4.06 Obstruction of a Government Employee	| 	Misdemeanor	| 	Up to 3 Minutes
+4.07 Misuse of a Government Hotline	| 	Infraction/Misdemeanor	| 	Up to 2 Minutes
+4.08 Tampering With Evidence	| 	Misdemeanor	| 	Up to 5 Minutes
+4.09 Forgery of Public Record	| 	Misdemeanor	| 	Up to 3 Minutes
+4.10 Perjury	| 	Felony	| 	From 8 to 15 Minutes
+4.11 Falsification of Evidence	| 	Felony	| 	From 5 to 10 Minutes
+4.12 Dissuading a Witness	| 	Misdemeanor	| 	Up to 5 Minutes
+4.13 Evading	| 	Misdemeanor	| 	Up to 5 Minutes
+4.14 Felony Reckless Evading	| 	Felony	| 	From 8 to 15 Minutes
+4.15 Refusal to Sign	| 	Misdemeanor	| 	From 5 to 15 Minutes
+4.16 Failure to Pay Fine	| 	Misdemeanor	| 	From 5 to 15 Minutes
+4.17 Contempt of Court	| 	Misdemeanor	| 	Up to 10 Minutes
+4.18 Provision of False Information to A State Employee	| 	Misdemeanor	| 	Up to 5 Minutes
+4.19 False Complaint	| 	Misdemeanor	| 	Up to 5 Minutes
+4.20 Human Trafficking	| 	Felony	| 	From 8 to 15 Minutes
+4.21 Violation of Parole or Probation	| 	Misdemeanor	| 	Up to 10 Minutes
+4.22 False Personation	| 	Felony	| 	Up to 5 Minutes
+4.23 Peace Officer Refusing to Arrest	| 	Felony	| 	Up to 5 Minutes
+4.24 False Report of Crime or Emergency	| 	Felony	| 	Up to 10 Minutes
+4.25 Street Gang Membership	| 	Felony	| 	From 8 to 15 Minutes	| 	
+5.01 Intimidation	| 	Misdemeanor	| 	Up to 5 Minutes
+5.02 Assault	| 	Misdemeanor	| 	Up to 5 Minutes
+5.03 Assault With a Deadly Weapon	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+5.04 Mutual Combat	| 	Misdemeanor	| 	Up to 5 Minutes
+5.05 Battery	| 	Misdemeanor	| 	Up to 5 Minutes
+5.06 Aggravated Battery	| 	Misdemeanor	| 	Up to 10 Minutes
+5.07 Attempted Murder	| 	Felony	| 	From 8 to 15 Minutes
+5.08 Manslaughter	| 	Felony	| 	From 8 to 15 Minutes
+5.09 Murder	| 	Felony	| 	From 8 to 15 Minutes
+5.10 False Imprisonment	| 	Misdemeanor	| 	Up to 5 Minutes
+5.11 Kidnapping	| 	Felony	| 	From 8 to 18 Minutes
+5.12 Mayhem	| 	Felony	| 	From 8 to 15 Minutes
+5.13 Hate Crime	| 	Felony	| 	From 8 to 15 Minutes
+5.14 Hostage Taking	| 	Felony	| 	From 8 to 15 Minutes	| 		| 	
+6.01 Indecent Exposure	| 	Misdemeanor	| 	Up to 5 Minutes
+6.02 Obscene Exhibition	| 	Misdemeanor	| 	Up to 5 Minutes
+6.03 Bawdy or Disorderly House	| 	Misdemeanor	| 	Up to 5 Minutes
+6.04 Prostitution	| 	Misdemeanor	| 	Up to 5 Minutes
+6.05 Solicitation	| 	Misdemeanor	| 	Up to 5 Minutes
+6.06 Pandering	| 	Misdemeanor	| 	Up to 5 Minutes
+6.07 Sexual Assault	| 	Misdemeanor	| 	Up to 5 Minutes
+6.08 Sexual Battery	| 	Misdemeanor	| 	Up to 10 Minutes
+6.09 Rape	| 	Felony	| 	From 8 to 15 Minutes
+6.10 Stalking	| 	Misdemeanor	| 	Up to 5 Minutes
+6.11 Disorderly Conduct	| 	Misdemeanor	| 	Up to 5 Minutes
+7.01 Possession of a Controlled Substance	| 	Misdemeanor	| 	Up to 5 Minutes
+7.02 Possession of a Controlled Substance with Intent to Distribute	| 	Felony	| 	From 5 to 10 Minutes
+7.03 Possession of Drug Paraphernalia	| 	Misdemeanor	| 	Up to 3 Minutes
+7.04 Maintaining a Place for Purpose of Distribution	| 	Felony	| 	From 5 to 10 Minutes
+7.05 Manufacture of a Controlled Substance	| 	Felony	| 	From 5 to 15 Minutes
+7.06 Sale of a Controlled Substance	| 	Felony	| 	From 5 to 10 Minutes
+7.07 Possession of an Open Container	| 	Infraction	| 	N/A
+7.08 Public Intoxication	| 	Misdemeanor	| 	Up to 5 Minutes
+7.09 Public Influence of a Controlled Substance	| 	Misdemeanor	| 	Up to 5 Minutes
+7.10 Possession in Excess	| 	Misdemeanor	| 	Up to 5 Minutes
+7.11 Criminal Threats	| 	Misdemeanor	| 	Up to 5 Minutes
+7.12 Reckless Endangerment	| 	Misdemeanor	| 	Up to 5 Minutes
+7.13 Trafficking of a Controlled Substance	| 	Felony	| 	From 5 to 10 Minutes	| 	
+8.01 Obstruction of Assembly	| 	Misdemeanor	| 	Up to 5 Minutes
+8.02 Riot	| 	Misdemeanor	| 	Up to 10 Minutes
+8.03 Incitement to Riot	| 	Misdemeanor	| 	Up to 5 Minutes
+8.04 Unlawful Assembly	| 	Misdemeanor	| 	Up to 5 Minutes
+8.05 Breach of the Peace	| 	Misdemeanor	| 	Up to 5 Minutes
+8.06 Obstruction of Rightful Passage	| 	Misdemeanor	| 	Up to 5 Minutes
+9.01 Arson	| 	Felony	| 	From 8 to 15 Minutes
+9.02 Burglary	| 	Felony	| 	From 8 to 15 Minutes
+9.03 Possession of Burglary Tools	| 	Misdemeanor	| 	Up to 5 Minutes
+9.04 Forgery	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+9.05 Petty Theft	| 	Misdemeanor	| 	Up to 10 Minutes
+9.06 Grand Theft	| 	Felony	| 	From 5 to 15 Minutes
+9.07 Embezzlement	| 	Misdemeanor/Felony	| 	Up to 10 Minutes/From 5 to 15 Minutes
+9.08 Trespassing	| 	Misdemeanor	| 	Up to 5 Minutes
+9.09 Robbery	| 	Felony	| 	From 5 to 15 Minutes
+9.10 Armed Robbery	| 	Felony	| 	From 8 to 15 Minutes
+9.11 Receiving Stolen Property	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+9.12 Vandalism	| 	Misdemeanor	| 	Up to 5 Minutes
+9.13 Criminal Damage	| 	Misdemeanor	| 	Up to 5 Minutes
+9.14 Grand Larceny	| 	Felony	| 	From 5 to 15 Minutes	| 	
+10.01 Hate Crime	| 	Misdemeanor/Felony	| 	Up to 10 Minutes	| 		| 	
+11.01 Extortion	| 	Felony	| 	From 5 to 10 Minutes
+11.02 Money Laundering	| 	Felony	| 	From 5 to 10 Minutes	| 	
+12.01 Unlawful Possession of a Firearm	| 	Felony 	| 	From 5 to 10 Minutes
+12.02 Unlawful Concealment of a Firearm	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+12.03 Unlawful Carry of a Firearm	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+12.04 Unlawful Display of a Firearm	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+12.05 Unlawful Discharge of a Firearm	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+12.06 Unlawful Possession of a Deadly Weapon	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+12.07 Unlawful Display of a Deadly Weapon	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+12.08 Unlawful Concealment of a Deadly Weapon	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes
+12.09 Unlawful Possession of An Explosive Device	| 	Felony	| 	From 5 to 15 Minutes
+12.10 Manufacture of an Explosive Device	| 	Felony	| 	From 8 to 15 Minutes
+12.11 Unlawful Distribution of a Firearm	| 	Misdemeanor/Felony	| 	Up to 10 Minutes/From 8 to 15 Minutes
+12.12 Unlawful Possession of FIrearms with Intent to Sell	| 	Felony	| 	From 5 to 15 Minutes.
+12.13 Unlawful Modification of a Firearm	| 	Misdemeanor/Felony	| 	Up to 5 Minutes/From 5 to 10 Minutes"""
     us_inpt = arg  
     err = "Nothing has been found based on your input"
     found_list = []
