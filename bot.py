@@ -51,20 +51,14 @@ async def links(ctx):
 
 
 @bot.command()
-async def embe(ctx, *, arg):
+async def embe(ctx, *, arg,arg2,arg3,arg4):
     user_inpt = arg  
-    embed = discord.Embed(title="".join(user_inpt), description="_Used to convey quick links to important information about the State Police_", color=0x3D59AB)
+    embed = discord.Embed(title="".join(user_inpt), description="".join(arg2), color=0x3D59AB)
 	
     embed.set_author(name="{}".format(ctx.message.author), icon_url="{}".format(ctx.author.avatar_url))
 	
-    embed.add_field(name="Standard Operating Procedures", value="[Click Here](https://docs.google.com/document/d/1KSx0TRJNOxV519Fn7saWGD6E9rIEKA2hWOa6U0BSWYY/edit)", inline=False)
-    embed.add_field(name="Uniform and Vehicle Guidelines", value="[Click Here](https://docs.google.com/document/d/1KrCscKX3FfANuiBJadci9ElmYpFkz4BPlmNPLMYTir0/edit)", inline=False)
-    embed.add_field(name="Penal Codes", value="[Click Here](https://docs.google.com/spreadsheets/d/1_HbwpqX9-QhGZ7oZkT3dmzW_O448hD86c-PqfmpvYIY/edit#gid=0)", inline=False)
-    embed.add_field(name="Roster", value="[Click Here](http://sasp.highspeed-gaming.com/index.php?/topic/22-san-andreas-state-police-roster/)", inline=False)
-    embed.add_field(name="Divisional Placements", value="[Click Here](http://sasp.highspeed-gaming.com/index.php?/topic/21-san-andreas-state-police-division-placements/)", inline=False)
-    embed.add_field(name="Punitive Articles/Disciplinary Policy", value="[Click Here](http://sasp.highspeed-gaming.com/index.php?/topic/79-san-andreas-state-police-punitive-articles-and-disciplinary-policy/)", inline=False)
-    embed.add_field(name="Transfers", value="[Click Here](http://sasp.highspeed-gaming.com/index.php?/forum/68-transfers/)", inline=False)
-	
+    embed.add_field(name=".join(arg3), value="[Click Here]("".join(arg4))", inline=False)
+ 
     await ctx.send(embed=embed)
 
 
