@@ -53,11 +53,14 @@ async def links(ctx):
 @bot.command()
 async def embe(ctx, *, arg,arg2,arg3,arg4):
     user_inpt = arg  
-    embed = discord.Embed(title="".join(user_inpt), description="".join(arg2), color=0x3D59AB)
+    user_inpt2 = arg2
+    user_inpt3 = arg3
+    user_inpt3 = arg4
+    embed = discord.Embed(title="".join(user_inpt), description="".join(user_inpt2), color=0x3D59AB)
 	
     embed.set_author(name="{}".format(ctx.message.author), icon_url="{}".format(ctx.author.avatar_url))
 	
-    embed.add_field(name=".join(arg3), value="[Click Here]("".join(arg4))", inline=False)
+    embed.add_field(name="".join(user_inpt3), value="[Click Here]("".join(user_inpt4))", inline=False)
  
     await ctx.send(embed=embed)
 
