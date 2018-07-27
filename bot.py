@@ -52,10 +52,15 @@ async def links(ctx):
 
 @bot.command()
 async def embe(ctx):
-    em = discord.Embed(description='requested by:\n{0}'.format(ctx.author))
-    em.set_thumbnail(ctx.author.avatar_url)
     await ctx.send(embed=em)
-	
+    embed=discord.Embed(title="Test", description='requested by:\n{0}'.format(ctx.message.author))
+    embed.set_author(name="Raymond")
+    embed.add_field(name=test123, value=test12314231231241234123123, inline=False)
+    embed.add_field(name=asdasqwe123, value=asdaseqweq, inline=True)
+    embed.set_footer(text="asdasdasd")
+    await ctx.send(embed=embed)
+
+
 @bot.command()
 async def clear(ctx, amount: int):
     await ctx.channel.purge(limit=amount)
