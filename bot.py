@@ -50,18 +50,11 @@ async def links(ctx):
     await ctx.send(embed=embed)
 
 
-@bot.command(pass_context=True, hidden=True)
-async def setname(ctx, *, name):
-    name = name.strip()
-    if name != "":
-        try:
-            await name.edit(username=name)
-        except:
-            await ctx.say("Failed to change name")
-        else:
-            await ctx.say("Successfuly changed name to {}".format(name))
-    else:
-        await ctx.send_cmd_help(ctx)
+@bot.command()
+async def embe(ctx):
+    em = discord.Embed(description='requested by:\n{0}'.format(ctx.author))
+    em.set_thumbnail(ctx.author.avatar_url)
+    await ctx.send(embed=em)
 	
 @bot.command()
 async def clear(ctx, amount: int):
