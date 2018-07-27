@@ -55,12 +55,9 @@ async def setname(ctx, *, name):
     name = name.strip()
     if name != "":
         try:
-            await nick.edit(username=name)
-	    await nickname.edit(username=name)
+            await name.edit(username=name)
 	    await bot.edit(username=name)
 	    await ctx.edit(username=name)
-	    await client.edit(username=name)
-	    await ClientUser.edit(username=name)
         except:
             await ctx.say("Failed to change name")
         else:
