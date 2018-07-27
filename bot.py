@@ -67,7 +67,7 @@ async def embe(ctx,ar,arg,arg2,arg3,arg4):
     await ctx.message.delete()
 
 @bot.command()
-async def clear(ctx, arg):
+async def clear(ctx, amount: int):
     await ctx.channel.purge(limit=amount)
 
 @bot.command()
