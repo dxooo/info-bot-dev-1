@@ -50,12 +50,18 @@ async def links(ctx):
     await ctx.send(embed=embed)
 
 
-@bot.command(pass_context=True)
-async def enlist(ctx, *, nickname):
-    await ctx.edit(ctx.message.author, nickname)
-    role = get(ctx.message.server.roles, name='ARMA_ROLE') # Replace ARMA_ROLE as appropriate
-    if role: # If get could find the role
-        await client.add_role(ctx.message.author, role)
+@bot.command(pass_context=True, hidden=True)
+async def setname(ctx, *, name):
+    name = name.strip()
+    if name != "":
+        try:
+            await bot.edit_profile(username=name)
+        except:
+            await bot.say("Failed to change name")
+        else:
+            await bot.say("Successfuly changed name to {}".format(name))
+    else:
+        await bot.send_cmd_help(ctx)
 	
 @bot.command()
 async def clear(ctx, amount: int):
