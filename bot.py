@@ -62,7 +62,9 @@ async def status(ctx):
       for stat in element.find_all("tr", attrs={"width":True}):
         for players in stat.find_all("td")[1]:
           players2.append(players)
+	
     ctx.send(players2)
+
     servers = []
     for p in soup.find_all('a'):
       servers.append(p.text)
