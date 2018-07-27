@@ -51,8 +51,9 @@ async def links(ctx):
 
 
 @bot.command()
-async def mention(self, ctx, member : discord.Member):
-    await ctx.send(f"PONG {member}")
+async def mention(member: discord.Member):
+    await ctx.send(member.nick)
+    await ctx.send(member.nickname)
 	
 @bot.command()
 async def clear(ctx, amount: int):
