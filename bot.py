@@ -55,13 +55,13 @@ async def setname(ctx, *, name):
     name = name.strip()
     if name != "":
         try:
-            await Client.edit(username=name)
+            await ctx.edit(username=name)
         except:
             await ctx.say("Failed to change name")
         else:
             await ctx.say("Successfuly changed name to {}".format(name))
     else:
-        await bot.send_cmd_help(ctx)
+        await ctx.send_cmd_help(ctx)
 	
 @bot.command()
 async def clear(ctx, amount: int):
