@@ -69,7 +69,7 @@ async def embe(ctx,ar,arg,arg2,arg3,arg4):
 @bot.command()
 async def clear(ctx, amount: int):
     await ctx.channel.purge(limit=amount)
-
+# what
 @bot.command()
 async def status(ctx):
     web = requests.get('http://status.highspeed-gaming.com/')
