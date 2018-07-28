@@ -88,6 +88,7 @@ async def status(ctx):
     embed.add_field(name="Server 1", value=servers[0], inline=False)
     embed.add_field(name="S1 - Players", value=', '.join(players2), inline=False)
     embed.add_field(name="Server 2", value=servers[1], inline=False)
+    embed.add_field(name="S2 - Players", value=', '.join(players2), inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
