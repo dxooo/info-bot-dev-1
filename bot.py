@@ -15,6 +15,24 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 	
+@bot.command()
+async def poll(ctx, arg1=None):
+    if ctx.author.bot:
+        print('bot tried to send message and was denied')
+    else:
+        embed = discord.Embed(title="✅ Someone started a poll!", description="All the informations below", color=0xd01818)
+        embed.add_field(name="Started By", value=ctx.author.mention, inline=False)
+        embed.add_field(name="Poll", value=arg1, inline=False)
+        embed.add_field(name="Answer 👍", value="Yes!", inline=True)
+        embed.add_field(name="Answer 👎", value="No!", inline=True)
+        embed.add_field(name="Answer 🤷", value="I Don't Know!", inline=True)
+        embed.set_thumbnail(url=ctx.author.avatar_url)
+        await ctx.message.delete()
+        msg = await ctx.send(embed=embed)
+        await msg.add_reaction('👍')
+        await msg.add_reaction('👎')
+        await msg.add_reaction('🤷')
+	
 # Greet new users and provide helpful information	
 @bot.event
 async def on_member_join(member):
